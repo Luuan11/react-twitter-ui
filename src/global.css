@@ -1,0 +1,41 @@
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --twitter-color: #1da1f2;
+}
+
+body{
+    color: #0f1419;
+    -webkit-font-smoothing: antialised;
+}
+
+body, input, textarea, button{
+    font: 400 1rem "Roboto", san-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+}
+
+/* twitter page */
+.layout {
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.sidebar{
+    padding: 1.5rem 1.25rem;
+}
+
+
