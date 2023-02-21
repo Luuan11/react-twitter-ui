@@ -1,11 +1,41 @@
-interface TweetProps {
-    user: string
-    children: string
-    likes ?: number
-}
+
+import './Tweet.css';
+import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
 
 export function Tweet() {
     return(
-        <div>Tweet</div>
+        <a href="#" className="tweet">
+            <img src="https://pbs.twimg.com/profile_images/1456733134909841419/nWGCp-SS_400x400.jpg" alt="Foto do usuário"/>
+
+            <div className="tweet-content">
+                <div className="tweet-content-header">
+                    <strong>Luuan</strong>
+                    <span>@Luuan011</span>
+                </div>
+
+                <p>
+
+                <img src="https://pbs.twimg.com/media/EupM-VeWYAUvrOI?format=jpg&name=small" alt="" />
+
+                </p>
+
+                <div className="tweet-content-footer">
+                    <button type="button">
+                        <ChatCircle />
+                        20
+                    </button>
+
+                    <button type="button">
+                        <ArrowsClockwise />
+                        20
+                    </button>
+
+                    <button type="button">
+                        <Heart />
+                    </button>
+                </div>
+
+            </div>
+        </a>
     )
 }
