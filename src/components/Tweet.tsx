@@ -15,7 +15,9 @@ export function Tweet() {
 
                 <p>
 
-                <img src="https://pbs.twimg.com/media/EupM-VeWYAUvrOI?format=jpg&name=small" alt="" />
+                {/* <img src="https://pbs.twimg.com/media/EupM-VeWYAUvrOI?format=jpg&name=small" alt="" /> */}
+
+                QUE EP FODA DE DEMON SLAYER
 
                 </p>
 
@@ -32,6 +34,7 @@ export function Tweet() {
 
                     <button type="button">
                         <Heart />
+                        20
                     </button>
                 </div>
 
