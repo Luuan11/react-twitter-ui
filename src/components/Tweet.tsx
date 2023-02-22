@@ -2,7 +2,11 @@
 import './Tweet.css';
 import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
 
-export function Tweet() {
+interface TweetProps{
+    content: string;
+}
+
+export function Tweet(props: TweetProps) {
     return(
         <a href="#" className="tweet">
             <img src="https://pbs.twimg.com/profile_images/1456733134909841419/nWGCp-SS_400x400.jpg" alt="Foto do usuário"/>
@@ -14,11 +18,7 @@ export function Tweet() {
                 </div>
 
                 <p>
-
-                {/* <img src="https://pbs.twimg.com/media/EupM-VeWYAUvrOI?format=jpg&name=small" alt="" /> */}
-
-                QUE EP FODA DE DEMON SLAYER
-
+                    {props.content}
                 </p>
 
                 <div className="tweet-content-footer">
