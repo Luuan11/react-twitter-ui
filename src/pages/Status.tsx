@@ -1,9 +1,10 @@
-import { FormEvent, useState } from "react"
+import { FormEvent, KeyboardEvent, useState } from "react"
 import { Header } from "../components/Header"
 import { Separator } from "../components/Separator"
 import { Tweet } from "../components/Tweet"
 
 import './Status.css'
+import { PaperPlaneRight } from "phosphor-react"
 
 export function Status(){
     const [newAnswer, setNewAnswer] = useState('')
@@ -13,21 +14,26 @@ export function Status(){
         'Verdade',
     ])
 
-    function createNewAnswer(event: FormEvent){
+    function createNewAnswer(event: FormEvent) {
         event.preventDefault()
-
-        setAnswers([...answers, newAnswer])
-
-        //deletando o value do textarea
+    
+        setAnswers([newAnswer, ...answers])
         setNewAnswer('')
-    }
+      }
+    
+      function handleHotkeySubmit(event: KeyboardEvent) {
+        if (event.key === 'Enter') {
+          setAnswers([newAnswer, ...answers])
+          setNewAnswer('')
+        }
+      }
 
     return(
         <main className="status">
 
             <Header title='Tweet' />
 
-            <Tweet content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid perspiciatis soluta voluptatum ratione veniam repellat enim impedit natus quae voluptate autem, itaque quia dicta iusto delectus dolorum ipsam sequi quidem!" />
+            <Tweet content="Olá passarinhos azuis, me chamo Luan Fernando e sou fascinado por programação e gosto muito de tecnologia, quero muito me tornar dev front-end, alguém tem uma dica ai hein hein? " />
 
             <Separator />
 
@@ -37,13 +43,18 @@ export function Status(){
                     <textarea 
                     id="tweet" 
                     placeholder="Tweet your answer"
+                    value={newAnswer}
+                    onKeyDown={handleHotkeySubmit}
                     onChange={(event) =>[
                         setNewAnswer(event.target.value)
                     ]}
                      />
                 </label>
 
-                <button type="submit">Answer</button>
+                <button type="submit">
+                    <PaperPlaneRight />
+                    <span>Answer</span> 
+                </button>
             </form>
 
             {answers.map(answers => {

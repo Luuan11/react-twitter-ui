@@ -17,6 +17,11 @@
     gap: 2rem;
 }
 
+.sidebar-nav a svg{
+    width: 2rem;
+    height: 2rem;
+}
+
 .sidebar-nav a{
     display: flex;
     align-items: center;
@@ -33,7 +38,7 @@
 .sidebar .sidebar-btn{
     background: var(--twitter-color);
     border-radius: 9999px;
-    padding: 1rem;
+    padding: 1.2rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -44,6 +49,25 @@
     border: none;
 }
 
+.sidebar-btn svg{
+    display: none;
+}
+
 .sidebar .sidebar-btn:hover{
     filter: brightness(0.9);
+}
+
+@media (max-width: 780px){
+    .sidebar{
+        padding: 1.5rem 0.7rem;
+        align-items: center;
+    }
+
+    .sidebar-nav a span, .sidebar-btn span{
+        display: none;
+    }
+
+    .sidebar-btn svg{
+        display: block;
+    }
 }
