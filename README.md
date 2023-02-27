@@ -10,6 +10,7 @@ esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML, CSS
 - ReactJS TypeScript
+- ViteJs
 
 ## Clone
 
