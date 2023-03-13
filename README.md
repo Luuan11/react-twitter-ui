@@ -5,14 +5,15 @@
 
 
 ## 💬 Sobre
-Pagina clone ui do Twitter
+Pagina clone UI do twitter usando ReactJS
 
 ### 💡 Tecnologias:
 
 esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML, CSS
-- ReactJS TypeScript
+- ReactJS 
+- TypeScript
 - ViteJs
 
 ## Clone
